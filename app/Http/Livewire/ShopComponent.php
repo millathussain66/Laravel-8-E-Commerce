@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 class ShopComponent extends Component
 {
     use WithPagination;
+
     public function render()
     {
         $product = Product::paginate(12);

@@ -64,27 +64,24 @@
 							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
 								<div class="product product-style-3 equal-elem ">
 									<div class="product-thumnail">
-										<a href="detail.html" title="{{ $item->name }}">
+										<a href="{{ route('product.details',['slug'=> $item->slug])}}" title="{{ $item->name }}">
 											<figure><img src="{{asset('assets/images/products')}}/{{$item->image}}" alt=""></figure>
 										</a>
 									</div>
 									<div class="product-info">
-										<a href="#" class="product-name"><span>{{ $item->name }}</span></a>
-										<div class="wrap-price"><span class="product-price">{{ $item->sele_price}}</span></div>
-										<a href="#" class="btn add-to-cart">Add To Cart</a>
+										<a href="{{ route('product.details',['slug'=> $item->slug])}}" class="product-name"><span>{{ $item->name }}</span></a>
+										<div class="wrap-price"><span class="product-price">{{ $item->reguler_price}}</span></div>
+										<a href="" class="btn add-to-cart">Add To Cart</a>
 									</div>
 								</div>
 							</li>
                             @endforeach
 						</ul>
-
 					</div>
-
 					<div class="wrap-pagination-info">
 
-                        {{$products->links() }}
 
-
+                            {{ $products->links() }}
 						{{-- <ul class="page-numbers">
 							<li><span class="page-number-item current" >1</span></li>
 							<li><a class="page-number-item" href="#" >2</a></li>

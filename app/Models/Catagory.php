@@ -12,5 +12,4 @@ class Catagory extends Model
 
 
 
-    
 }
