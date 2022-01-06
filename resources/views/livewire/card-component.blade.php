@@ -11,12 +11,16 @@
 			<div class=" main-content-area">
 				<div class="wrap-iten-in-cart">
 					<h3 class="box-title">Products Name</h3>
-
-                    @if(Session::has('message'))
-                    <p class="alert alert-info">{{ Session::get('message') }}</p>
-                    @endif
+                    {{-- Flash Message  --}}
+                    @if (session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+                @endif
+                 {{-- Flash Message  --}}
 
                     @if (Cart::count() > 0)
+
 					<ul class="products-cart">
                         @foreach (Cart::content() as $item)
 
@@ -27,19 +31,19 @@
 							<div class="product-name">
 								<a class="link-to-product" href="{{ route('product.details',['slug'=>$item->model->slug])}}">{{ $item->model->name}}</a>
 							</div>
-							<div class="price-field produtc-price"><p class="price">{{ $item->model->reguler_price}}</p></div>
+							<div class="price-field produtc-price"><p class="price">$ {{ $item->model->reguler_price}}</p></div>
 							<div class="quantity">
 								<div class="quantity-input">
 									<input type="text" name="product-quatity" value="{{ $item->qty }}" data-max="120" pattern="[0-9]*" >
 
-                    <a class="btn btn-increase" href="#" wire:click="incriceQuentity('{{ $item->rowId }}')"></a>
-                    <a class="btn btn-reduce" href="#" wire:click="dicriceQuentity('{{ $item->rowId }}')"></a>
+                          <a class="btn btn-increase" href="#" wire:click="increase('{{ $item->rowId }}')"></a>
+                          <a class="btn btn-reduce" href="#" wire:click="reduce('{{ $item->rowId }}')"></a>
 
 								</div>
 							</div>
-							<div class="price-field sub-total"><p class="price">{{ Cart::subtotal()}}</p></div>
+							<div class="price-field sub-total"><p class="price"> $ {{ Cart::subtotal()}}</p></div>
 							<div class="delete">
-								<a href="#" class="btn btn-delete" title="">
+								<a href="#" class="btn btn-delete" title="Delete" wire:click="destroy('{{ $item->rowId }}')">
 									<span>Delete from your cart</span>
 									<i class="fa fa-times-circle" aria-hidden="true"></i>
 								</a>
