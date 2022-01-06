@@ -26,7 +26,7 @@ Route::get('/', function () {
 
 Route::get('/', HomeComponent::class);
 Route::get('/shop',ShopComponent::class );
-Route::get('/card',CardComponent::class);
+Route::get('/card',CardComponent::class)->name('product.card');
 Route::get('/checkout',CheckoutComponent::class );
 Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
 
