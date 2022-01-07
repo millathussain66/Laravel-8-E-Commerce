@@ -33,6 +33,6 @@ class DetailsComponent extends Component
 
     // All Data Passing Here
 
-    return view('livewire.details-component',['product'=>$product,'populer_product'=>$populer,'reletedProudct'=> $reletedProduct])->layout('layout.base');
+    return view('livewire.details-component',['product'=>$product,'populer_product'=>$populer,'reletedProudct'=> $reletedProduct])->layout('layouts.base');
     }
 }

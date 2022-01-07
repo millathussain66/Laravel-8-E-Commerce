@@ -36,6 +36,6 @@ class CardComponent extends Component
 
     public function render()
     {
-        return view('livewire.card-component')->layout('layout.base');
+        return view('livewire.card-component')->layout('layouts.base');
     }
 }

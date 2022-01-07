@@ -8,6 +8,6 @@ class AdminDeshbordComponent extends Component
 {
     public function render()
     {
-        return view('livewire.admin.admin-deshbord-component')->layout('layout.base');
+        return view('livewire.admin.admin-deshbord-component')->layout('layouts.base');
     }
 }

@@ -26,11 +26,9 @@
 
 						<div class="wrap-right">
 
-							<div class="sort-item orderby ">
-								<select name="orderby" class="use-chosen" >
-									<option value="menu_order" selected="selected">Default sorting</option>
-									<option value="popularity">Sort by popularity</option>
-									<option value="rating">Sort by average rating</option>
+							<div class="sort-item orderby" >
+								<select name="orderby" class="use-chosen" wire.model="sorting" >
+									<option value="default" selected="selected">Default sorting</option>
 									<option value="date">Sort by newness</option>
 									<option value="price">Sort by price: low to high</option>
 									<option value="price-desc">Sort by price: high to low</option>
@@ -38,7 +36,7 @@
 							</div>
 
 							<div class="sort-item product-per-page">
-								<select name="post-per-page" class="use-chosen" >
+								<select name="post-per-page" class="use-chosen" wire.model="parpage" >
 									<option value="12" selected="selected">12 per page</option>
 									<option value="16">16 per page</option>
 									<option value="18">18 per page</option>
@@ -60,7 +58,7 @@
 
 <div class="row">
     <ul class="product-list grid-products equal-container">
-    @foreach ($products as $item)
+    @foreach ($posts as $item)
         <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
             <div class="product product-style-3 equal-elem ">
                 <div class="product-thumnail">
@@ -76,12 +74,13 @@
             </div>
         </li>
         @endforeach
+
     </ul>
 </div>
 					<div class="wrap-pagination-info">
-                        {{-- For Paggination  show here  --}}
-                            {{ $products->links() }}
-                        {{-- For Paggination  show here  --}}
+
+                        {{ $posts->links() }}
+
 					</div>
 				</div>
                 <!--end main products area-->
