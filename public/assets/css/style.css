@@ -7163,7 +7163,13 @@ background-color: #888888;
     color: red;
 }
 /* for pagginsiton */
-/*
+
+
+.hidden {
+    /* display: none !important; */
+    display: block !important;
+}
+
 .pl-4,.px-4{
     padding-left: 1.5rem !important;
 }
@@ -7198,5 +7204,5 @@ svg{
 }
 .word-pagination-info, .round-r-md{
     margin-left: 5px;
-} */
+}
 /* for pagginsiton */

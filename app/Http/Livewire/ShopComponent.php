@@ -11,14 +11,13 @@ class ShopComponent extends Component
 {
 
 
-
     public $sorting;
     public $parpage;
 
     public function mount()
     {
-        $this->sorting="default";
-        $this->parpage=12;
+        $this->sorting = "default";
+        $this->parpage = 12;
     }
 
     public function store($product_id, $product_name, $product_price)

@@ -64,15 +64,15 @@
                     </li>
                     {{-- Admin Logout --}}
 <li class="menu-item" >
+
     <a title="logout" onclick="event.preventDefault();document.getElementById('logout-from').submit();;
     " href="{{ url('logout')}}">Logout</a>
 </li>
 <form id="logout-from" action="{{ url('logout') }}" method="POST">
     @csrf
-
 </form>
 
-                       @else
+ @else
                        {{-- User Link --}}
                     <li class="menu-item menu-item-has-children parent" >
           <a title="my Accound" href="#">My Accound {{ Auth::user()->name }} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -222,7 +222,7 @@
 		</div>
 	</header>
 
-    {{$slot }}
+    {{ $slot }}
 
 	<footer id="footer">
 		<div class="wrap-footer-content footer-style-1">
