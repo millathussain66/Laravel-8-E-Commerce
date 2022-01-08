@@ -8,13 +8,8 @@ use Cart;
 use Livewire\WithPagination;
 use App\Models\Catagory;
 
-
-
-
 class ShopComponent extends Component
 {
-
-
     public $sorting;
     public $parpage;
 
@@ -23,7 +18,6 @@ class ShopComponent extends Component
         $this->sorting = "default";
         $this->parpage = 12;
     }
-
     public function store($product_id, $product_name, $product_price)
     {
         Cart::add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
