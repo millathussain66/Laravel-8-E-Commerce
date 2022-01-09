@@ -70,7 +70,8 @@
 						_title 	 = _this.text();
                     _content = _content.slice(0, 12);
                     _this.parent().siblings('a').text(_content).attr('title',_title);
-                    _this.parent().siblings('input[name="product-cate"]').val(_value);
+                    _this.parent().siblings('input[name="product_cat"]').val(_value);
+                    _this.parent().siblings('input[name="product_cat_id"]').val(_this.data('id'));
                     _this.parent().slideUp();
                 });
 			}
