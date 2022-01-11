@@ -7164,12 +7164,6 @@ background-color: #888888;
 }
 /* for pagginsiton */
 
-
-.hidden {
-    /* display: none !important; */
-    display: block !important;
-}
-
 .pl-4,.px-4{
     padding-left: 1.5rem !important;
 }
