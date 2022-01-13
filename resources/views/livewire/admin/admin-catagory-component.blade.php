@@ -11,12 +11,11 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     {{-- Session Message --}}
-
-                    {{-- @if (session()->has('message'))
+                    @if (session()->has('message'))
                         <div class="alert alert-success">
                             {{ session('message') }}
                         </div>
-                    @endif --}}
+                    @endif
 
                     {{-- Session Message --}}
                     <div class="panel-heading">
@@ -47,6 +46,7 @@
                                             <td>{{ $item->slug }}</td>
                                             <td>
                                              <a class="btn btn-success" href="{{ route('admin.editeCatagory',['catagory_slug'=>$item->slug]) }}">Update</a>
+                                             <a class="btn btn-danger" href="" wire:click.prevent="deleteCatagory({{ $item->id }})">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach

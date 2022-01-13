@@ -11,6 +11,25 @@ class AdminCatagoryComponent extends Component
 
     use WithPagination;
 
+    public function deleteCatagory($id)
+    {
+
+        $catagorie = Catagory::find($id);
+        $catagorie->delete();
+
+        session()->flash('message' , 'catagory Delete Successfully');
+
+
+
+
+
+
+
+    }
+
+
+
+
     public function render()
     {
         $catagoris = Catagory::paginate(5);
