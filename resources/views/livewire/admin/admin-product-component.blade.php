@@ -49,7 +49,7 @@
                                         <td>{{ $products->name }}</td>
                                         <td>{{ $products->stock_status }}</td>
                                         <td>{{ $products->reguler_price }}</td>
-                                        <td>{{ $products->catagroy()->name }}</td>
+                                        <td>{{ $products->catagroy->name }}</td>
                                         <td>{{ $products->created_at }}</td>
                                         <td>
                                         </td>
