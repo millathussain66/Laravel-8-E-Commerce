@@ -24,7 +24,7 @@
                                 All Product Here
                             </div>
                             <div class="col-md-6">
-                                <a href="" class="btn btn-success pull-right">Add Product</a>
+                                <a href="{{ route('admin.addProduct') }}" class="btn btn-success pull-right">Add Product</a>
                             </div>
                         </div>
                         <div class="panel-body">
