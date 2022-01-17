@@ -21,10 +21,10 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                All Product Here ;
+                                All Product Here
                             </div>
                             <div class="col-md-6">
-                                <a href="" class="btn btn-success pull-right"></a>
+                                <a href="" class="btn btn-success pull-right">Add Product</a>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -45,11 +45,11 @@
                                     @foreach ($product as $products)
                                     <tr>
                                         <td>{{ $products->id}}</td>
-                                        <td><img src="{{ asset('assets/images/products')}}/{{ $products->images }} " alt=""></td>
+                                        <td><img class="image_stock" src="{{ asset('assets/images/products')}}/{{ $products->image }} " alt=""></td>
                                         <td>{{ $products->name }}</td>
                                         <td>{{ $products->stock_status }}</td>
                                         <td>{{ $products->reguler_price }}</td>
-                                        <td>{{ $products->catagroy->name }}</td>
+                                        <td>{{ $products->catagorie_id }}</td>
                                         <td>{{ $products->created_at }}</td>
                                         <td>
                                         </td>
@@ -57,7 +57,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{ $posts->links() }}
+                            {{ $product->links() }}
                         </div>
                     </div>
                 </div>

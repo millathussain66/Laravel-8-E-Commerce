@@ -7199,4 +7199,10 @@ svg{
 .word-pagination-info, .round-r-md{
     margin-left: 5px;
 }
-/* for pagginsiton */
+
+
+/* Admin product image show  */
+
+img.image_stock {
+    width: 5rem;
+}

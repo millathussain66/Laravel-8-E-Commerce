@@ -11,11 +11,11 @@ class Catagory extends Model
     protected $table = "catagories";
 
 
-
-    public function catgagroy()
+    public function ProductRelations()
     {
         return $this->hasOne(Product::class);
     }
+
 
 
 
