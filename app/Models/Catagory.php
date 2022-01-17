@@ -12,4 +12,11 @@ class Catagory extends Model
 
 
 
+    public function catgagroy()
+    {
+        return $this->hasOne(Product::class);
+    }
+
+
+
 }

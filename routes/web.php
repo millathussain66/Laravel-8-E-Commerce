@@ -4,6 +4,7 @@ use App\Http\Livewire\Admin\AdminAddCatagoryComponent;
 use App\Http\Livewire\Admin\AdminCatagoryComponent;
 use App\Http\Livewire\Admin\AdminDeshbordComponent;
 use App\Http\Livewire\Admin\AdminEditeCatagoryComponent;
+use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\CardComponent;
 use App\Http\Livewire\CatagoryComponent;
 use App\Http\Livewire\CheckoutComponent;
@@ -47,5 +48,6 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('admin/catagoris',AdminCatagoryComponent::class)->name('admin.catagoris');
     Route::get('admin/addcatagoris/add',AdminAddCatagoryComponent::class)->name('admin.addCatagory');
     Route::get('admin/addcatagoris/edite/{catagory_slug}',AdminEditeCatagoryComponent::class)->name('admin.editeCatagory');
+    Route::get('admin/products', AdminProductComponent::class)->name('admin.product');
 
 });

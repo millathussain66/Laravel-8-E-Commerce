@@ -79,6 +79,12 @@
 
                                                 </li>
 
+                                                <li class="menu-item">
+                                                    <a title="Catagory"
+                                                        href="{{ route('admin.product') }} ">Products</a>
+
+                                                </li>
+
 
 
 
