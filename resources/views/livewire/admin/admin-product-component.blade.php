@@ -52,6 +52,10 @@
                                         <td>{{ $products->catagroy->name }}</td>
                                         <td>{{ $products->created_at }}</td>
                                         <td>
+
+                                            <a class="btn btn-success" href="">Update</a>
+                                             <a class="btn btn-danger" href="">Delete</a>
+
                                         </td>
                                     </tr>
                                     @endforeach
