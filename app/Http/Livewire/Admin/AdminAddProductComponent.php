@@ -51,12 +51,16 @@ class AdminAddProductComponent extends Component
         $product->stock_status               = $this->stock_status;
         $product->featuare                   = $this->featuare;
         $product->queantity                  = $this->queantity;
-        $imageName = Carbon::now()->timestamp.'-'.$this->image->extension();
-        $this->image->storeAs('products', $imageName);
-        $product->image                      = $imageName;
+
+         $imageName = Carbon::now()->timestamp.'-'.$this->image->extension();
+         $this->image->storeAs('products', $imageName);
+         $product->image = $imageName;
+
+
         $product->catagories_id              = $this->catagories_id;
         $product->save();
-        session()->flash('message' , 'Product Added Successfully');
+
+        session()->flash('message','Product Added Successfully');
 
     }
 

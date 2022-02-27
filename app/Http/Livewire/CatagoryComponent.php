@@ -35,24 +35,9 @@ class CatagoryComponent extends Component
     {
 
         $catagories = Catagory::where('slug',$this->catagory_slug)->first();
+
         $catagory_id = $catagories->id;
         $catagory_name = $catagories->name;
-
-        // if($this->sorting=="date"){
-
-        // $catagory_id = $catagory->id;
-        // $product = Product::where('catagorie_id', $catagory_id)->orderBy('created_at','DESC')->paginate($this->parpage);
-
-        // }else if($this->sorting=="price") {
-
-        //     $product = Product::where('catagorie_id', $catagory_id)->orderBy('reguler_price','ASC')->paginate($this->parpage);
-
-        // }else if ($this->sorting=="price-desc"){
-        //     $product = Product::where('catagorie_id', $catagory_id)->orderBy('reguler_price','DESC')->paginate($this->parpage);
-        // }else{
-
-        //
-        // }
 
         $product = Product::where('catagorie_id', $catagory_id)->paginate($this->parpage);
         $catagory = Catagory::all();

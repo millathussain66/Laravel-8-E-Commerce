@@ -53,7 +53,7 @@
                                         <td>{{ $products->created_at }}</td>
                                         <td>
 
-                                            <a class="btn btn-success" href="">Update</a>
+                                            <a class="btn btn-success" href="{{ route('admin.editeProduct',['product_slug'=>$products->slug]) }}">Update</a>
                                              <a class="btn btn-danger" href="">Delete</a>
 
                                         </td>
